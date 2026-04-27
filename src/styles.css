@@ -18,9 +18,7 @@
     radial-gradient(circle at 80% 10%, rgba(0, 0, 0, 0.05) 0 1px, transparent 1px);
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -50,157 +48,13 @@ body.theme-dark {
   --mountain-color: #334b6b;
 }
 
-.app-shell {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
 .paper-card {
   border-radius: var(--paper-radius);
   box-shadow: var(--paper-shadow);
   background-image: var(--paper-texture);
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.8rem 1rem;
-  background-color: var(--card-bg);
-}
-
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links a,
-.footer a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 600;
-}
-
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: none;
-  border-radius: 999px;
-  padding: 0.3rem 0.7rem;
-  background: #d8d8d8;
-  cursor: pointer;
-}
-
-.theme-toggle.is-dark {
-  background: #42556f;
-  color: #fff;
-}
-
-.toggle-thumb {
-  width: 1.3rem;
-  height: 1.3rem;
-  border-radius: 50%;
-  background: #ffffff;
-}
-
-.section {
-  margin-top: 1.5rem;
-}
-
-.scene {
-  position: relative;
-  overflow: hidden;
-  min-height: 420px;
-  border-radius: 32px;
-}
-
-.scene-layer {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  border-radius: 28px;
-  box-shadow: var(--paper-shadow);
-}
-
-.sun-moon {
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  position: absolute;
-  top: 52px;
-  left: 42%;
-  z-index: 5;
-}
-
-.sun {
-  background: var(--color-sun);
-}
-
-.moon {
-  background: var(--color-moon);
-}
-
-.crater {
-  position: absolute;
-  border-radius: 50%;
-  background: #d8d4b4;
-}
-
-.crater-1 { width: 10px; height: 10px; left: 20px; top: 24px; }
-.crater-2 { width: 14px; height: 14px; left: 42px; top: 17px; }
-.crater-3 { width: 9px; height: 9px; left: 36px; top: 48px; }
-
-.stars {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.star {
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  fill: #f7f9dd;
-  opacity: 0.35;
-  animation: twinkle 2.4s ease-in-out infinite;
-}
-
-.s-1 { top: 9%; left: 8%; }
-.s-2 { top: 18%; left: 21%; animation-delay: 0.2s; }
-.s-3 { top: 7%; left: 62%; animation-delay: 1.2s; }
-.s-4 { top: 24%; left: 85%; animation-delay: 1.6s; }
-.s-5 { top: 11%; left: 45%; animation-delay: 0.8s; }
-.s-6 { top: 28%; left: 31%; }
-.s-7 { top: 14%; left: 73%; animation-delay: 0.4s; }
-.s-8 { top: 21%; left: 55%; animation-delay: 1.4s; }
-.s-9 { top: 32%; left: 12%; animation-delay: 0.9s; }
-.s-10 { top: 34%; left: 91%; animation-delay: 0.6s; }
-
-@keyframes twinkle {
-  0%,
-  100% { opacity: 0.3; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.1); }
-}
-
-.hero-copy {
-  position: relative;
-  z-index: 7;
-  max-width: 520px;
-  margin: 2rem;
-  padding: 1.2rem;
-  background-color: color-mix(in srgb, var(--card-bg) 85%, #fff);
-}
+.section { margin-top: 1.5rem; }
 
 .cta-button {
   margin-top: 0.6rem;
@@ -211,69 +65,4 @@ body.theme-dark {
   color: #202020;
   font-weight: 700;
   cursor: pointer;
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.feature-card,
-.demo-shell,
-.cta-section,
-.footer {
-  background-color: var(--card-bg);
-}
-
-.feature-card {
-  padding: 1rem;
-}
-
-.demo-shell {
-  padding: 1rem;
-  border-radius: 28px;
-}
-
-.demo-shell iframe {
-  width: 100%;
-  border: none;
-  border-radius: 16px;
-  min-height: 320px;
-}
-
-.cta-section {
-  padding: 1.4rem;
-  text-align: center;
-}
-
-.footer {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-
-.footer-links {
-  display: flex;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 760px) {
-  .header,
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .scene {
-    min-height: 480px;
-  }
-
-  .hero-copy {
-    margin: 1rem;
-  }
 }
