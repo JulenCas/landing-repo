@@ -1,0 +1,12 @@
+.demo-shell {
+  padding: 1rem;
+  border-radius: 28px;
+  background-color: var(--card-bg);
+}
+
+.demo-shell iframe {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  min-height: 320px;
+}

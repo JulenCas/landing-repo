@@ -1,0 +1,68 @@
+:root {
+  --color-sky-light: #87ceeb;
+  --color-sky-dark: #0a3d62;
+  --color-sun: #ffd700;
+  --color-moon: #f5f3ce;
+  --color-ground-1-light: #98fb98;
+  --color-ground-1-dark: #2a5733;
+  --color-ground-2-light: #f8c471;
+  --color-ground-2-dark: #614a3a;
+  --color-accent-light: #ff8c00;
+  --color-accent-dark: #ffb347;
+  --color-text-light: #333333;
+  --color-text-dark: #f0f0f0;
+
+  --paper-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --paper-radius: 24px;
+  --paper-texture: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 10%, rgba(0, 0, 0, 0.05) 0 1px, transparent 1px);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--color-text);
+  background: var(--color-sky);
+  transition: background 0.8s ease-in-out, color 0.8s ease-in-out;
+}
+
+body.theme-light {
+  --color-sky: var(--color-sky-light);
+  --color-ground-1: var(--color-ground-1-light);
+  --color-ground-2: var(--color-ground-2-light);
+  --color-accent: var(--color-accent-light);
+  --color-text: var(--color-text-light);
+  --card-bg: #fff6e9;
+  --mountain-color: #89a6c7;
+}
+
+body.theme-dark {
+  --color-sky: var(--color-sky-dark);
+  --color-ground-1: var(--color-ground-1-dark);
+  --color-ground-2: var(--color-ground-2-dark);
+  --color-accent: var(--color-accent-dark);
+  --color-text: var(--color-text-dark);
+  --card-bg: #213140;
+  --mountain-color: #334b6b;
+}
+
+.paper-card {
+  border-radius: var(--paper-radius);
+  box-shadow: var(--paper-shadow);
+  background-image: var(--paper-texture);
+}
+
+.section { margin-top: 1.5rem; }
+
+.cta-button {
+  margin-top: 0.6rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.3rem;
+  background: var(--color-accent);
+  color: #202020;
+  font-weight: 700;
+  cursor: pointer;
+}
